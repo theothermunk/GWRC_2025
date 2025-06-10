@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([19365493.086588, -5072877.839610, 19512738.080918, -4979512.251838], map.getSize());
+map.getView().fit([19425954.349240, -5078723.054468, 19499903.744735, -5031717.011160], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -244,7 +244,7 @@ function onPointerMove(evt) {
                     highlightStyle = new ol.style.Style({
                         image: new ol.style.Circle({
                             fill: new ol.style.Fill({
-                                color: "#ffff00"
+                                color: "#808080"
                             }),
                             radius: radius
                         })
@@ -255,7 +255,7 @@ function onPointerMove(evt) {
 
                     highlightStyle = new ol.style.Style({
                         stroke: new ol.style.Stroke({
-                            color: '#ffff00',
+                            color: '#808080',
                             lineDash: null,
                             width: featureWidth
                         })
@@ -264,7 +264,7 @@ function onPointerMove(evt) {
                 } else {
                     highlightStyle = new ol.style.Style({
                         fill: new ol.style.Fill({
-                            color: '#ffff00'
+                            color: '#808080'
                         })
                     })
                 }

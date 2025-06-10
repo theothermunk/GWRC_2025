@@ -84,7 +84,7 @@ var style_shareofgrowth20232033_2 = function(feature, resolution){
     };
     
     var labelText = ""; 
-    var value = feature.get("q2wHide_GrowthGroup");
+    var value = feature.get("GrowthGroup");
     var labelFont = "13.0px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "";
