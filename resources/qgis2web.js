@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([19425954.349240, -5078723.054468, 19499903.744735, -5031717.011160], map.getSize());
+map.getView().fit([19444005.026308, -5055411.362838, 19506253.073265, -5020511.700776], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -449,7 +449,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'top-left-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">DRAFT SA2 projections</h2>';
+        titleElement.innerHTML = '<h2 class="project-title">June 2025 SA2 projections</h2>';
         return titleElement;
     })(),
     target: 'top-left-container'
@@ -466,7 +466,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (139 > 240) {
+        if (120 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -480,13 +480,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'Initial local area (SA2) projections for review. <br />The map colours show each local area\'s share of population growth within its district/TA.';
+                linkElement.innerHTML = 'Local area (SA2) projections. <br />The map colours show each local area\'s share of population growth within its district/TA.';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'Initial local area (SA2) projections for review. <br />The map colours show each local area\'s share of population growth within its district/TA.';
+            linkElement.innerHTML = 'Local area (SA2) projections. <br />The map colours show each local area\'s share of population growth within its district/TA.';
         }
 
         titleElement.appendChild(linkElement);
